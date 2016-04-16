@@ -11,8 +11,12 @@ void transform(long int);
 int main(int argc, char *argv[])
 {
 	long int n;
-	printf("%s\n", "Podaj liczbę: ");
-	scanf("%ld", &n);
+	do
+	{
+		printf("%s\n", "Podaj liczbę: ");
+		scanf("%ld", &n);	
+		if(n>999999) printf("%s\n", "Liczba za duża!");	
+	}while(n>999999);
 	cout<<"Twoja liczba to: ";
 	transform(n);
 	cout<<endl;
